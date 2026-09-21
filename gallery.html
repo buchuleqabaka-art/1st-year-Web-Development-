@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shalom House Care</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            background-color: #fef6e4; 
+            margin: 0;
+        }
+
+        header {
+            background: linear-gradient(to right, #f4c2c2, #e3c6c6);
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 40px;
+            color: #5b3b3b;
+            margin: 0;
+        }
+
+        footer {
+            background-color: #e3c6c6;
+            padding: 15px;
+            color: #333;
+            font-size: 14px;
+            border-top: 2px solid #f4c2c2;
+        }
+
+        #current-date {
+            font-weight: bold;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .logo {
+            max-width: 150px;
+            height: auto;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f4c2c2;
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #e8a1a1;
+            transform: scale(1.05);
+        }
+
+        .nav-button i {
+            margin-right: 8px;
+            transition: transform 0.3s;
+        }
+
+        .nav-button:hover i {
+            transform: scale(1.1);
+        }
+
+        main {
+            max-width: 800px;
+            margin: auto;
+            padding: 40px 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #d94f5c;
+            margin-bottom: 20px;
+        }
+
+        /* Slideshow Container */
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .slides {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .slideshow-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 3px 3px 0 0;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation: fade 1.5s;
+        }
+
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f4c2c2;
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e8a1a1;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="SHALOM HOUSE CARE LOGO.png" alt="Shalom House Care Logo" class="logo">
+            <h1>Welcome to Shalom House Care</h1>
+        </div>
+        <nav class="nav-buttons">
+            <a href="index.html" class="nav-button"><i class="fas fa-home"></i> Home</a>
+            <a href="services.html" class="nav-button"><i class="fas fa-concierge-bell"></i> Services</a>
+            <a href="gallery.html" class="nav-button"><i class="fas fa-images"></i> Gallery</a>
+            <a href="about.html" class="nav-button"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="contact.html" class="nav-button"><i class="fas fa-envelope"></i> Contact Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Gallery</h2>
+            <div class="slideshow-container">
+                <div class="slides fade">
+                    <img src="SHC1.jpg" alt="Gallery Image 1">
+                </div>
+                <div class="slides fade">
+                    <img src="SHC2.jpg" alt="Gallery Image 2">
+                </div>
+                <div class="slides fade">
+                    <img src="SHC3.jpeg" alt="Gallery Image 3">
+                </div>
+                <div class="slides fade">
+                    <img src="SHC4.jpg" alt="Gallery Image 4">
+                </div>
+                <div class="slides fade">
+                    <img src="SHC5.png" alt="Gallery Image 5">
+                </div>
+                <div class="slides fade">
+                    <img src="SHC6.jpeg" alt="Gallery Image 6">
+                </div>
+                <div class="slides fade">
+                    <img src="SHC7.jpeg" alt="Gallery Image 7">
+                </div>
+                <div class="slides fade">
+                    <img src="SHC8.jpeg" alt="Gallery Image 8">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </section>
+
+        <div class="buttons">
+            <a href="index.html" class="btn">Home</a>
+            <a href="services.html" class="btn">Services</a>
+            <a href="contact.html" class="btn">Contact Us</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Shalom House Care. All rights reserved. | <span id="current-date"></span></p>
+    </footer>
+
+    <script>
+        const dateElement = document.getElementById('current-date');
+        const today = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        dateElement.textContent = today.toLocaleDateString('en-US', options);
+
+        let slideIndex = 0;
+        showSlides();
+
+        function plusSlides(n) {
+            slideIndex += n;
+            showSlides();
+        }
+
+        function showSlides() {
+            const slides = document.getElementsByClassName("slides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex = (slideIndex + slides.length) % slides.length;
+            slides[slideIndex].style.display = "block";
+        }
+
+        setInterval(() => {
+            plusSlides(1);
+        }, 3000); 
+    </script>
+</body>
+</html>
+
+

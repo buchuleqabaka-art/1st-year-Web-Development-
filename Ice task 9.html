@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Connect with us on social media! Reach out via our Contact Us page.">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #ffccdd;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+            width: 80%;
+        }
+        .social-media {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #ff99cc;
+            border-radius: 10px;
+        }
+        .social-media a {
+            text-decoration: none;
+            color: black;
+            font-size: 2em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .block {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 30px;
+        }
+        .block div {
+            background-color: #ff66b2;
+            border-radius: 10px;
+            padding: 20px;
+            width: 30%;
+            text-align: center;
+        }
+        .block a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+        }
+        h1 {
+            color: #d5006d;
+            text-align: center;
+            font-size: 2.5em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        
+        <div class="social-media" id="socialMediaContainer"></div>
+        
+
+        <div class="block">
+            <div>
+                <h2>Visit Us</h2>
+                <p>Explore our services and latest updates.</p>
+                <a href="/visit-us">Learn More</a>
+            </div>
+            <div>
+                <h2>Call Us</h2>
+                <p>We’re here to help! Reach out to us anytime.</p>
+                <a href="tel:+1234567890">Call Now</a>
+            </div>
+            <div>
+                <h2>Contact Us</h2>
+                <p>Send us a message and our team will respond shortly.</p>
+                <a href="/contact-form">Get in Touch</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const socialMediaLinks = [
+            { icon: 'fab fa-whatsapp', url: 'https://web.whatsapp.com' },
+            { icon: 'fab fa-facebook-f', url: 'https://www.facebook.com' },
+            { icon: 'fab fa-twitter', url: 'https://twitter.com' },
+            { icon: 'fab fa-instagram', url: 'https://www.instagram.com' },
+            { icon: 'fab fa-tiktok', url: 'https://www.tiktok.com' },
+        ];
+
+        const socialMediaContainer = document.getElementById('socialMediaContainer');
+
+        socialMediaLinks.forEach(link => {
+            const anchor = document.createElement('a');
+            anchor.href = link.url;
+            anchor.target = '_blank'; // Open in a new tab
+            anchor.innerHTML = `<i class="${link.icon}" aria-hidden="true"></i>`;
+            socialMediaContainer.appendChild(anchor);
+        });
+    </script>
+
+</body>
+</html>
